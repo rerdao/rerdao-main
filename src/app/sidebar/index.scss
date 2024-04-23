@@ -1,0 +1,85 @@
+@tailwind utilities;
+
+@layer utilities {
+  .sidebar {
+    @apply sticky top-0 bg-base-100 transition-all;
+
+    .menu {
+      .menu-option {
+        @apply text-sm hidden;
+      }
+      .menu-logo {
+        @apply h-5 w-5;
+      }
+      .menu-title {
+        @apply font-semibold hover:bg-inherit #{!important};
+      }
+      .menu-text {
+        @apply font-semibold;
+      }
+      .menu-item {
+        @apply px-4 py-3 flex flex-row cursor-pointer rounded-lg;
+      }
+      li.disabled > a {
+        @apply cursor-not-allowed;
+      }
+    }
+    .sidebar-menu {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+
+      &::-webkit-scrollbar {
+        @apply hidden;
+      }
+    }
+    .menu-vertical > li:not(.menu-title) > details > ul {
+      @apply ml-0;
+    }
+  }
+
+  .sidebar.vertical {
+    @apply h-[100dvh] z-40;
+
+    &.open {
+      .menu {
+        @apply min-w-[14rem];
+        .menu-option {
+          display: inherit;
+        }
+      }
+    }
+
+    &:not(.open) {
+      .menu {
+        li {
+          a,
+          details summary {
+            @apply flex gap-0;
+          }
+        }
+      }
+    }
+
+    &.mobile {
+      @apply fixed -translate-x-full top-0;
+    }
+    &.mobile.open {
+      @apply translate-x-0;
+    }
+  }
+
+  .sidebar.horizontal {
+    @apply w-full z-30;
+  }
+
+  .overlay {
+    @apply fixed w-[100vw] h-[100dvh] top-0 left-0 bg-base-300 opacity-60 backdrop-blur-xl cursor-pointer transition-all z-40 hidden;
+
+    &.mobile {
+      @apply hidden;
+    }
+    &.mobile.open {
+      @apply block;
+    }
+  }
+}

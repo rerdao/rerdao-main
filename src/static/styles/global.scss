@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import '@solana/wallet-adapter-react-ui/styles.css';
+@import 'react-datepicker/dist/react-datepicker.css';
+@import './typography.scss';
+@import './scrollbar.scss';
+
+html {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  @screen md {
+    font-size: 16px;
+  }
+}
+
+// Custom css Date picker
+.react-datepicker__calendar-icon {
+  padding: 0 !important;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 8px;
+}
+.react-datepicker__view-calendar-icon input {
+  padding: 8px;
+}
