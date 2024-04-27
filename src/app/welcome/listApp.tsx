@@ -8,26 +8,19 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
 
 import {
   booster,
-  farming,
-  launchpad,
   merkleDistribution,
   swap,
 } from '@/static/images/welcome/appsIcon'
 
 const TOP_APPS = [
-  { route: '/swap', name: 'Swap', icon: swap, disabled: false },
-  { route: '/academy', name: 'Booster', icon: booster, disabled: true },
-  { route: '/farming', name: 'Farming', icon: farming, disabled: false },
-]
-
-const BOTTOM_APPS = [
+  { route: '/dao', name: 'Create DAO', icon: swap, disabled: false },
+  { route: '/academy', name: 'Learn', icon: booster, disabled: false },
   {
     route: '/token-distribution/airdrop-vesting',
     name: 'Token Distribution',
     icon: merkleDistribution,
     disabled: false,
   },
-  { route: '/launchpad', name: 'Launchpad', icon: launchpad, disabled: true },
 ]
 
 type AppProps = {
@@ -95,11 +88,11 @@ export default function ListApp() {
             The limit breaker for projects on Solana.
           </p>
         </div>
-        <div className="bottom-apps flex flex-row justify-center gap-7 md:gap-16">
+        {/* <div className="bottom-apps flex flex-row justify-center gap-7 md:gap-16">
           {BOTTOM_APPS.map((app) => (
             <App key={app.route} {...app} />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   )

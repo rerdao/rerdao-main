@@ -2,12 +2,12 @@
 import classNames from 'classnames'
 
 import {
-  BookPlus,
-  Repeat,
-  Droplets,
+  // BookPlus,
+  // Repeat,
+  // Droplets,
   GraduationCap,
-  BarChartBig,
-  Leaf,
+  // BarChartBig,
+  // Leaf,
   Rocket,
   Home,
   LucideIcon,
@@ -28,31 +28,31 @@ type NavigateMenuProps = {
 
 const ROUTES: MenuItemData[] = [
   { route: '/', name: 'Home', Logo: Home },
-  { route: '/academy', name: 'Academy', Logo: GraduationCap },
-  { route: '/swap', name: 'Swap', Logo: Repeat },
-  {
-    route: '/pools',
-    name: 'Pools',
-    Logo: BarChartBig,
-  },
-  { route: '/farming', name: 'Farming', Logo: Leaf },
-  {
-    route: '/token-distribution',
-    name: 'Token Distribution',
-    Logo: Droplets,
-    children: [
-      {
-        route: '/token-distribution/bulk-sender',
-        name: 'Bulk Sender',
-      },
-      {
-        route: '/token-distribution/airdrop-vesting',
-        name: 'Airdrop & Vesting',
-      },
-    ],
-  },
-  { route: '/launchpad', name: 'Launchpad', Logo: Rocket },
-  { route: '/token-creation', name: 'Token Creation', Logo: BookPlus },
+  { route: '/academy', name: 'Learn', Logo: GraduationCap },
+  // { route: '/swap', name: 'Swap', Logo: Repeat },
+  // {
+  //   route: '/pools',
+  //   name: 'Pools',
+  //   Logo: BarChartBig,
+  // },
+  // { route: '/farming', name: 'Farming', Logo: Leaf },
+  // {
+  //   route: '/token-distribution',
+  //   name: 'Token Distribution',
+  //   Logo: Droplets,
+  //   children: [
+  //     {
+  //       route: '/token-distribution/bulk-sender',
+  //       name: 'Bulk Sender',
+  //     },
+  //     {
+  //       route: '/token-distribution/airdrop-vesting',
+  //       name: 'Airdrop & Vesting',
+  //     },
+  //   ],
+  // },
+  { route: '/dao', name: 'Create DAO', Logo: Rocket },
+  // { route: '/token-creation', name: 'Token Creation', Logo: BookPlus },
 ]
 
 export default function NavigateMenu({ open }: NavigateMenuProps) {
